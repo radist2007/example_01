@@ -374,22 +374,44 @@ footer {
 	position: relative;
 }
 .wrapper {
-	position: absolute;
+	/* position: absolute;
 	top: 50%;
 	left: 50%;
-	transform:  translate(-50%, -50%);
+	transform:  translate(-50%, -50%); */
 }
+
 .wrapper .wrappContainer {
-	outline: 3px solid orange;
+	position: fixed;
+	bottom: 0;
+	right: 10%;
+	/* outline: 3px solid orange; */
 	width: 350px;
-	/* overflow: hidden; */
+	overflow: hidden;
+	transform: translateY(504px);
+	transition: .5s;
+}
+.wrapper .wrappContainer:hover {
+	transform: translateY(494px)
+}
+.toggleForm:checked ~ .wrappContainer {
+	transform: translateY(0);
+}
+.toggleForm[type="checkbox"] {
+	display: none;
+}
+.toggleForm i {
+	position: absolute;
+	top: 7px;
+	left: 40px;
+	font-size: 33px!important;
 }
 .formBox {
 	padding: 30px;
 	border: 4px solid #8a36a5;
 	background-color: #fff;
 }
-.wrappContainer h3 {
+.toggleForm {
+	display: block;
 	background: #8a36a5;
 	color: #fff;
 	text-align: center;
