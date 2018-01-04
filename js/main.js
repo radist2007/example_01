@@ -4,5 +4,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		b[0].className += "loaded";
 	}, 3000);
 
+	$(".userInput").focus(function(){
+		$(this).parent().addClass("focus");
+	}).blur(function(){
+		if($(this).val() === ""){
+			$(this).parent().removeClass("focus");
+		}
+	})
 
 });
