@@ -389,8 +389,10 @@ footer {
 	overflow: hidden;
 	transform: translateY(504px);
 	transition: .5s;
+	opacity: 0.8;
 }
 .wrapper .wrappContainer:hover {
+	opacity: 1;
 	transform: translateY(494px)
 }
 .toggleForm:checked ~ .wrappContainer {
@@ -480,3 +482,226 @@ textarea.userInput {
 	background-color: #b33edc;
 }
 /* ========================================= End Messge ================================ */
+/* ========================================= Phone ================================ */
+.phone-wrapper {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+}
+.phone-pulse {
+	/* outline: 1px solid #FAA21A; */
+	width: 90px;
+	height: 90px;
+	color: #fff;
+	text-align: center;
+	background-color: #9CDAF0;
+	border-radius: 50%;
+	position: relative;
+	/* font-size: 	 */
+	cursor: pointer;	
+}
+.phone-phone {
+	position: absolute;
+	/* outline: 1px solid #8a36a5; */
+	font-size: 50px;
+	text-align: center;
+	width: 90px;
+	height: 90px;
+	line-height: 94px;
+	/* opacity: 0; */
+	animation: phone .9s ease-in-out infinite;
+}
+@keyframes phone {
+	0%, 100% {
+		transform: rotate(-20deg);
+	}
+	50% {
+		transform: rotate(21deg);
+	}
+}
+.phone-text {
+	opacity: 0;
+	position: absolute;
+	/* outline: 1px solid #8a36a5; */
+	text-transform: uppercase;
+	font-weight: 100;
+	top: 28px;
+	font-size: 14px;
+	transform: scaleX(-1);
+	transition: .5s ease-in-out;
+}
+.phone-phone i {
+	transition: .5s;
+}
+.phone-pulse:hover i {
+	transition: .5s ease-in-out;
+	transform: scale(0);
+}
+.phone-pulse:hover .phone-text {
+	transform: scaleX(1);
+	transition: .5s ease-in-out;
+	opacity: 1;
+}
+.phone-pulse:hover::before,
+.phone-pulse:hover::after {
+	content: "";
+	position: absolute;
+	border: 1px solid #9CDAF0;
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: pulse 1.8s linear infinite;
+	opacity: 0;
+}
+.phone-pulse:hover::after {
+	animation-delay: .5s;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+/* ========================================= End Phone ================================ */
+/* ========================================= Animate ================================ */
+.animation {
+	height: 100vh;
+	/* background-color: green!important; */
+	position: relative;
+}
+.animation-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* overflow: hidden; */
+	/* outline: 3px solid red; */
+	/* border: 3px solid yellow; */
+}
+.animation-boxImg {
+	position: relative;
+	width: 500px;
+	height: 300px;
+	border: 5px outset #393a39;
+	overflow: hidden;
+}
+.animation-boxImg img {
+	/* outline: 3px solid red; */
+	height: 300px;
+	width: 500px;
+	transition: .5s;
+}
+.animation-boxImg:hover a.animation-bt {
+	opacity: 1;
+}
+.animation-container {
+	/* outline: 4px solid yellow; */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.animation-container::before, .animation-container::after {
+	content: "";
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	background-color: #9CDAF0;
+	top: 0;
+	left: 0;
+	transition: 1s;
+}
+.animation-container::before {
+	transform: translateX(-125%) rotate(45deg);
+}
+.animation-container::after {
+	transform: translateX(195%) rotate(45deg);
+}
+.animation-text {
+	position: absolute;
+	top: 20%;
+	color: #fff;
+	text-align: center;
+	z-index: 10;
+}
+.animation-text h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	transform: scale(0);
+	transition: .5s;
+}
+.animation-text p {
+	font-size: 16px;
+	margin: 0 100px;
+	text-align: justify;
+	transform: scale(2);
+	transition: .5s;
+	opacity: 0;
+}
+a.animation-bt {
+	position: absolute;
+	top: 100%;
+	left: 37%;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 2px solid #fff;
+	margin: 20px 0 0 0;
+	padding: 10px 30px;
+	border-radius: 8px;
+	opacity: 0;
+	transition: .2s ease-in-out;
+	overflow: hidden;
+}
+a.animation-bt::before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: -75px;
+	height: 50px;
+	width: 50px;
+	background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+	transform: skewX(-45deg);
+}
+a.animation-bt:hover::before {
+	left: 150px;
+	transition: .5s ease-in-out;
+}
+a.animation-bt:active {
+	border: 2px solid #b3b3b3;
+}
+.animation-boxImg:hover img {
+	transform: rotate(-30deg) scale(2);
+	filter: blur(2px);
+}
+.animation-boxImg:hover .animation-container::before {
+	transform:  translateX(92%) rotate(45deg) scale(2);
+	transition: .5s;
+	opacity: .6;
+}
+.animation-boxImg:hover .animation-container::after {
+	transform:  translateX(-25%) rotate(45deg) scale(2);
+	transition: .5s;
+	opacity: .6;
+}
+.animation-boxImg:hover .animation-text h2 {
+	transform: scale(1);
+}
+.animation-boxImg:hover .animation-text p {
+	transform: scale(1);
+	opacity: 1;
+}
+.animation-boxImg:hover {
+	border:  5px inset #b7bab7;
+}
+/* ========================================= End Animate ================================ */
