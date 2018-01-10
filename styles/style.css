@@ -29,13 +29,13 @@ a {
 	margin: -50px 0 0 -50px;	
 	border: 6px solid rgba(0,0,0,0.3);
 	/* border: 6px solid transparent; */
-	border-top-color: blue;
+	border-top-color: #9CDAF0;
 	border-radius: 50%;
-	box-shadow: 0px 0px 160px green;
+	box-shadow: 0px 0px 160px #F4CAB1;
 
 	-webkit-animation: loader 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
 			animation: loader 2s linear infinite; /* Chrome, Firefox 15+, IE 10+, Opera */
-	background-color: green;
+	background-color: #F4CAB1;
 }
 #loader::before {
 	content: "";
@@ -46,7 +46,7 @@ a {
 	bottom: 5px;
 	/* border: 6px solid transparent; */
 	border: 6px solid rgba(0,0,0,0.2);
-	border-top-color: red;
+	border-top-color: #9CDAF0;
 	border-radius: 50%;
 
 	-webkit-animation: loader 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
@@ -62,7 +62,7 @@ a {
 	bottom: 17px;
 	/* border: 6px solid transparent; */
 	border: 6px solid rgba(0,0,0,0.1);
-	border-top-color: yellow;
+	border-top-color: #9CDAF0;
 	border-radius: 50%;
 
 	-webkit-animation: loader 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
@@ -213,6 +213,7 @@ nav {
 	background-color: transparent;
 	color: #f2f2f2;
 	text-transform: uppercase;
+	outline: none;
 }
 .login button:hover {
 	background-color: #F4CAB1;
@@ -220,8 +221,8 @@ nav {
 	cursor: pointer;
 }
 .login button:active {
-	background-color: yellow;
-	color: red;
+	background-color: #9CDAF0;
+	color: #F4CAB1;
 }
 nav a {
 	vertical-align: middle;
