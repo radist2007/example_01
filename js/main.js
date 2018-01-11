@@ -3,6 +3,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	setTimeout(function(){
 		let b = document.getElementsByTagName("body");
 		b[0].className += "loaded";
+		$('body').css('overflow', 'auto')
 	}, 3000);
 
 			// $('.ask-fade').fadeOut();
