@@ -5,10 +5,10 @@
     <title>Example 01</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css" media="all and (max-width: 820px)">
 </head>
 <body id="body">
     <!-- Loader -->
@@ -32,11 +32,11 @@
             <div class="header-right">
                 <nav class="nav">
                     <a href="#" class="nav-item nav-active">home</a>
-                    <a href="#" class="nav-item">fan</a>
-                    <a href="#" class="nav-item">element</a>
-                    <a href="#" class="nav-item">sam</a>
-                    <a href="#" class="nav-item">contacts</a>
-                    <a href="#" class="nav-item">about</a>
+                    <a href="#section1" class="nav-item">animation</a>
+                    <a href="#section2" class="nav-item">element</a>
+                    <a href="#section3" class="nav-item">sam</a>
+                    <a href="#contacts" class="nav-item">contacts</a>
+                    <a href="#section5" class="nav-item">about</a>
                 </nav>
                 <div class="login">
                     <button>login</button>
@@ -51,14 +51,17 @@
         <section class="section hero">
             <h1>Example for GitHub</h1>
             <p>GitHub is a Web-based Git version control repository hosting service.</p>
-            <p>“Don't let yesterday use up too much of today.”</p>
+            <p>GitHub has a mascot called Octocat, a cat with five tentacles and a human-like face.</p>
         </section>
         <!-- end hero -->
-        <section class="section">
+        <section id="section1" class="section">
+            <h2>animaion 1</h2>
+            <p>“Success is the ability to go from failure to failure without losing your enthusiasm.”</p>
+            <p>“Don't let yesterday use up too much of today.”</p>
             <div class="animation">
                 <div class="animation-wrapper">
                     <div class="animation-boxImg">
-                        <img src="img/custom-website-banners.jpg" alt="img">
+                        <img src="img/custom-website-banners-510.jpg" alt="img">
                         <div class="animation-container">
                             <div class="animation-text">
                                 <h2>Animation</h2>
@@ -70,11 +73,11 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section id="section2" class="section">
             <h2>section</h2>
             <p>“Success is the ability to go from failure to failure without losing your enthusiasm.”</p>
         </section>
-        <section class="section">
+        <section id="section3" class="section">
             <h2>section</h2>
             <p>“You are a human with one life and it is up to you to make it the best life you can.”</p>
         </section>
@@ -121,8 +124,8 @@
     <!-- End Main -->
     <!-- Contact Form -->
     <!-- <div class="forWrapper"> -->
-        <div class="wrapper">
-                <input type="checkbox" name="toggle" id="form" class="toggleForm">
+        <div class="ask-wrapper">
+            <input type="checkbox" name="toggle" id="form" class="toggleForm">
             <div class="wrappContainer">
                 <label for="form" class="toggleForm"><i class="fa fa-envelope-o"></i>Ask a Question</label>
                 <form action="#" class="formBox">
