@@ -1,3 +1,8 @@
+:root {
+	--skin: #F4CAB1;
+	--body: #201F1F;
+	--puddle: #93CEE3;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -10,20 +15,25 @@ a {
 body {
 	overflow: hidden;
 }
+h2 {
+	font-family: GothamBold;
+}
+
+
 
 /* =================================================================================== */
 /* ========================================= LOADER ================================== */
 /* =================================================================================== */
-#loader.ask-wrapper {
+#loader-wrapper {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%;
-	z-index: 100;
+	width: 100vw;
+	z-index: 130;
 }
 #loader {
-	z-index: 30;
+	z-index: 130;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -104,7 +114,7 @@ body {
 	width: 50vw;
 	background-color: black;
 	/* opacity: 0.7; */
-	z-index: 10;
+	z-index: 120;
 }
 .loader-section.section-right {
 	left: 0;
@@ -156,6 +166,7 @@ header .container {
 	padding: 0 20px;
 	/* background-color: #fff; */
 	box-sizing: border-box;
+	z-index: 110;
 }
 .header-left {
 	float: left;
@@ -403,7 +414,8 @@ footer {
 	transform: translateY(504px);
 	transition: .5s;
 	opacity: 0.8;
-	display: none;
+	/* visibility:hidden; */
+	/* display: none; */
 }
 .ask-hide{
 	transition: .5s;
@@ -428,12 +440,12 @@ footer {
 }
 .formBox {
 	padding: 30px;
-	border: 4px solid #9CDAF0;
+	border: 4px solid var(--body);
 	background-color: #fff;
 }
 .toggleForm {
 	display: block;
-	background: #9CDAF0;
+	background: var(--body);
 	color: #fff;
 	text-shadow: 0 0 6px #000;
 	text-align: center;
@@ -510,9 +522,10 @@ textarea.userInput {
 .phone-pulse {
 	width: 50px;
 	height: 50px;
-	color: #fff;
+	color: var(--body);
 	text-align: center;
-	background-color: #000;
+	background-color: var(--skin);
+	border: 2px solid var(--body);
 	border-radius: 50%;
 	position: relative;
 	cursor: pointer;	
@@ -725,3 +738,62 @@ a.animation-bt:active {
 	border:  5px inset #b7bab7;
 }
 /* ========================================= End Animate ================================ */
+/* ========================================= Animate3 ================================ */
+.anim3Box {
+	/* outline: 1px solid orange; */
+	/* overflow: hidden; */
+	height: 290px;
+	width: 280px;
+	margin: 0 auto;
+	border-radius: 4px;
+	position: relative;
+}
+.anim3Box img {
+	min-width: 280px;
+	height: 100%;
+	transition: .5s;
+	background-color: var(--puddle);
+}
+.anim3Box:hover img{
+	transform: scale(1.2) rotate(-10deg);
+	filter: grayscale(.75)
+}
+.anim3Box ul li {
+	list-style: none;
+}
+.anim3Box h3,
+.anim3Box p {
+	position: absolute;
+	transition: .8s;
+}
+.anim3Box h3 {
+	top: 45%;
+}
+.anim3Box p {
+	top: 55%;
+}
+/* ========================================= End Animate3 ================================ */
+/* ========================================= TopBtn ================================ */
+.topBtn {
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+	border: 2px solid var(--body);
+	cursor: pointer;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	color: var(--body);
+	text-transform: uppercase;
+	background-color: var(--skin);
+	border-radius: 50%;
+	transition: background-color .2s;
+}
+.topBtn:hover {
+	background-color: var(--puddle);
+	border: 1px solid var(--body);
+}
+.topBtn:focus {
+	outline: none;
+}
+/* ========================================= End TopBtn ================================ */

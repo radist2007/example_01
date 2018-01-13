@@ -31,15 +31,15 @@
             </div>
             <div class="header-right">
                 <nav class="nav">
-                    <a href="#" class="nav-item nav-active">home</a>
-                    <a href="#section1" class="nav-item">animation</a>
-                    <a href="#section2" class="nav-item">element</a>
-                    <a href="#section3" class="nav-item">sam</a>
-                    <a href="#contacts" class="nav-item">contacts</a>
-                    <a href="#section5" class="nav-item">about</a>
+                    <a href="#0" class="nav-item nav-active">home</a>
+                    <a href="#1" class="nav-item">animation</a>
+                    <a href="#2" class="nav-item">element</a>
+                    <a href="#3" class="nav-item">sam</a>
+                    <a href="#4" class="nav-item">contacts</a>
+                    <a href="#5" class="nav-item">about</a>
                 </nav>
                 <div class="login">
-                    <button>login</button>
+                    <button id="login">login</button>
                 </div>
             </div>
         </div>
@@ -74,12 +74,24 @@
             </div>
         </section>
         <section id="section2" class="section">
-            <h2>section</h2>
+            <h2>animatin2</h2>
             <p>“Success is the ability to go from failure to failure without losing your enthusiasm.”</p>
         </section>
         <section id="section3" class="section">
-            <h2>section</h2>
+            <h2>animatin3</h2>
             <p>“You are a human with one life and it is up to you to make it the best life you can.”</p>
+            <div class="anim3Box">
+                <img src="img/octocats/labtocat.png" alt="img">
+                <h3>labtocat</h3>
+                <p>text</p>
+                <ul>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-gitlab"></i></a></li>
+                    <li><a href="#"><i class="fa fa-git-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-code-fork"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github-alt"></i></a></li>
+                </ul>
+            </div>
         </section>
         <section class="section" id="contacts">
             <!-- <h2>contacts</h2> -->
@@ -160,8 +172,12 @@
             <div class="phone-text">Conect button</div>
         </div>
     </div>
+    <button class="topBtn">up</button>
     <!-- End Contact Form -->
+    <script src="js/Velocity.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/TimelineMax.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
