@@ -406,16 +406,19 @@ footer {
 } */
 
 .ask-wrapper  .wrappContainer {
+	/* transition: 0.5s; */
 	position: fixed;
 	bottom: 0;
 	right: 20px;
 	width: 350px;
 	overflow: hidden;
-	transform: translateY(504px);
-	transition: .5s;
+	transform: translateY(555px);
+	transition: all .5s;
 	opacity: 0.8;
-	/* visibility:hidden; */
+	visibility: hidden;
 	/* display: none; */
+	/* visibility: 0; */
+	/* opacity: 0; */
 }
 .ask-hide{
 	transition: .5s;
@@ -454,7 +457,7 @@ footer {
 	padding: 10px 0;
 	border-radius: 8px 8px 0 0;
 	width: 85%;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 .inputBox {
 	position: relative;
@@ -518,6 +521,9 @@ textarea.userInput {
 	position: fixed;
 	bottom: 40px;
 	left: 70px;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: visible;
 }
 .phone-pulse {
 	width: 50px;
@@ -788,8 +794,12 @@ a.animation-bt:active {
 	background-color: var(--skin);
 	border-radius: 50%;
 	transition: background-color .2s;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
 }
 .topBtn:hover {
+	opacity: 0;
 	background-color: var(--puddle);
 	border: 1px solid var(--body);
 }
@@ -797,3 +807,14 @@ a.animation-bt:active {
 	outline: none;
 }
 /* ========================================= End TopBtn ================================ */
+
+.hide-scroll {
+	visibility: visible!important;
+	opacity: 1!important;
+	/* cursor: pointer; */
+}
+.ask-hide-scroll {
+	visibility: visible!important;
+	transform: translateY(504px)!important;	
+	/* background-color: red; */
+}

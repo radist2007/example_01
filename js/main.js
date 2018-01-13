@@ -76,8 +76,43 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			console.log(attr);
 			Velocity( sections[attr], 'scroll', options );
 		}
-
 	})
+
+	// ScrollMagic
+	var controller = new ScrollMagic.Controller();
+	var ourScene = new ScrollMagic.Scene({
+		triggerElement: '#section1 img',
+		// duration: 300
+	})
+	.setClassToggle('.phone-wrapper', 'hide-scroll')
+	.addIndicators({
+		name: 'phone',
+		colorTrigger: 'black',
+		colorStart: 'red',
+	})
+	.addTo(controller);
+	var ourScene2 = new ScrollMagic.Scene({
+		triggerElement: '#section1',
+	})
+	.setClassToggle('.wrappContainer', 'ask-hide-scroll')
+	.addIndicators({
+		name: 'ask',
+		colorTrigger: 'black',
+		indent: 200,
+		colorStart: 'red',
+	})
+	.addTo(controller);
+	var ourScene3 = new ScrollMagic.Scene({
+		triggerElement: '#section2',
+	})
+	.setClassToggle('.topBtn', 'hide-scroll')
+	.addIndicators({
+		name: 'topBtn',
+		colorTrigger: 'black',
+		indent: 400,
+		colorStart: 'red',
+	})
+	.addTo(controller);
 
 
 });
