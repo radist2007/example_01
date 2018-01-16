@@ -8,7 +8,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	}, 3000);
 
 	//Ask question show on scrol
-	$(document).scroll(function(){
+	// $(document).scroll(function(){
 		// var y = $(this).scrollTop();
 		// var w = window.innerHeight;
 		// if (y > ( w )) {
@@ -16,29 +16,29 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// }else{
 		// 	$('.wrappContainer').fadeOut(1000);
 		// }
-	})
+	// })
 	// Ask question down on click
-	var mouseOverActiveElement = false;
-	$('.wrappContainer').on('mouseenter', function(){
-		mouseOverActiveElement = true;
-	}).on('mouseleave', function() {
-		mouseOverActiveElement = false;
-	});
-	$("body").click(function(e){
-		if(!mouseOverActiveElement) {
-			if($(".ask-wrapper input[name=toggle]").is(':checked')){
-				$(".ask-wrapper input[name=toggle]").prop('checked', false);
-			}
-		}
-	})
+	// var mouseOverActiveElement = false;
+	// $('.wrappContainer').on('mouseenter', function(){
+	// 	mouseOverActiveElement = true;
+	// }).on('mouseleave', function() {
+	// 	mouseOverActiveElement = false;
+	// });
+	// $("body").click(function(e){
+	// 	if(!mouseOverActiveElement) {
+	// 		if($(".ask-wrapper input[name=toggle]").is(':checked')){
+	// 			$(".ask-wrapper input[name=toggle]").prop('checked', false);
+	// 		}
+	// 	}
+	// })
 	// Ask question blur
-	$(".userInput").focus(function(){
-		$(this).parent().addClass("focus");
-	}).blur(function(){
-		if($(this).val() === ""){
-			$(this).parent().removeClass("focus");
-		}
-	})
+	// $(".userInput").focus(function(){
+	// 	$(this).parent().addClass("focus");
+	// }).blur(function(){
+	// 	if($(this).val() === ""){
+	// 		$(this).parent().removeClass("focus");
+	// 	}
+	// })
 
 	// Login pop
 	// $("#login").on('click', function(){
@@ -81,37 +81,39 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	// ScrollMagic
 	var controller = new ScrollMagic.Controller();
 	var ourScene = new ScrollMagic.Scene({
-		triggerElement: '#section1 img',
+		triggerElement: '#section1 .animation-container',
 		// duration: 300
 	})
 	.setClassToggle('.phone-wrapper', 'hide-scroll')
-	.addIndicators({
-		name: 'phone',
-		colorTrigger: 'black',
-		colorStart: 'red',
-	})
+	// .addIndicators({
+	// 	name: 'phone',
+	// 	colorTrigger: 'black',
+	// 	// colorTrigger: 'black',
+	// 	indent: 200,
+	// 	colorStart: 'red',
+	// })
 	.addTo(controller);
-	var ourScene2 = new ScrollMagic.Scene({
-		triggerElement: '#section1',
-	})
-	.setClassToggle('.wrappContainer', 'ask-hide-scroll')
-	.addIndicators({
-		name: 'ask',
-		colorTrigger: 'black',
-		indent: 200,
-		colorStart: 'red',
-	})
-	.addTo(controller);
+	// var ourScene2 = new ScrollMagic.Scene({
+	// 	triggerElement: '#section1',
+	// })
+	// .setClassToggle('.wrappContainer', 'ask-show-scroll')
+	// .addIndicators({
+	// 	name: 'ask',
+	// 	colorTrigger: 'black',
+	// 	indent: 200,
+	// 	colorStart: 'red',
+	// })
+	// .addTo(controller);
 	var ourScene3 = new ScrollMagic.Scene({
 		triggerElement: '#section2',
 	})
 	.setClassToggle('.topBtn', 'hide-scroll')
-	.addIndicators({
-		name: 'topBtn',
-		colorTrigger: 'black',
-		indent: 400,
-		colorStart: 'red',
-	})
+	// .addIndicators({
+	// 	name: 'topBtn',
+	// 	colorTrigger: 'black',
+	// 	indent: 400,
+	// 	colorStart: 'red',
+	// })
 	.addTo(controller);
 
 
